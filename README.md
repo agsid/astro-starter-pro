@@ -73,6 +73,7 @@ export const siteConfig = {
   // ...
 };
 ```
+
 <br>
 
 <img alt="PageSpeed Insights Score 100/100" src="https://github.com/user-attachments/assets/541d4bfc-bcb9-4287-bd91-08564108d706" />
