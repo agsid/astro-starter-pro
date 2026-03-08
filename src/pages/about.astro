@@ -3,44 +3,44 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getImage } from "astro:assets";
 import Content2 from "@/components/widgets/Content2.astro";
 import Values from "@/components/widgets/Values.astro";
-import aboutImage from "@/assets/images/about-office.webp";
+import aboutImage from "@/assets/images/about-office.webp"; // Suggestion: Replace with a photo of your team or a library
 
 const metadata = {
-  title: "About us",
+  title: "About Peak Peer",
   description:
-    "Learn more about our vision, values, and the team behind Astro Starter Pro.",
+    "Learn about the high schoolers behind Peak Peer and our mission to support middle school students.",
 };
 
 const values = [
   {
-    title: "Innovation",
+    title: "Relatability",
     description:
-      "Curabitur dignissim, felis non sollicitudin molestie, urna mauris pellentesque velit, ut eleifend.",
+      "We were in middle school just a few years ago. We remember the stress, the social pressure, and exactly how the curriculum works.",
   },
   {
-    title: "Commitment",
+    title: "Mentorship",
     description:
-      "Aenean condimentum finibus mauris, a fermentum justo pan eget. Sed ultricies, neque quis.",
+      "Beyond just grades, we act as 'big siblings,' offering advice on navigating the transition to high school and extracurriculars.",
   },
   {
-    title: "Quality",
+    title: "Clarity",
     description:
-      "Donec sed orci tincidunt, aliquam nisl a, condimentum nunc. Nulla varius ex nec ante feugiat.",
+      "We explain concepts using language that makes sense to a 12-year-old, avoiding the stiff academic jargon often used by adults.",
   },
   {
-    title: "Transparency",
+    title: "Organization",
     description:
-      "Phasellus tristique, elit dapibus cursus facilisis, lorem augue fringilla nunc, vitae fermentum.",
+      "Half the battle in middle school is keeping track of assignments. We teach the systems and habits that keep us organized in high school.",
   },
   {
-    title: "Teamwork",
+    title: "Growth Mindset",
     description:
-      "In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et.",
+      "We believe every student can improve. Our goal is to build confidence so students feel empowered to tackle difficult subjects alone.",
   },
   {
-    title: "Excellence",
+    title: "Community",
     description:
-      "Fusce at massa nec sapien auctor gravida in in tellus. Vivamus a tristique metus, et molestie.",
+      "As local high schoolers, we care about our school district and want to see our younger peers succeed and lead.",
   },
 ];
 
@@ -52,35 +52,37 @@ const optimizedImage = await getImage({
 
 <BaseLayout {metadata}>
   <link slot="head" rel="preload" href={optimizedImage.src} as="image" />
+
   <Content2
-    title="Our Vision"
+    title="Our Mission"
     description={[
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Peak Peer was founded by a group of high school honors students who realized that the best people to help middle schoolers are those who just finished it. We bridge the gap between classroom teaching and real-world student success.",
+      "Our mission is to provide high-quality, affordable tutoring while fostering a mentorship connection that traditional tutoring centers simply can't replicate. We're not just tutors; we're your neighbors, your peers, and your future high school teammates.",
     ]}
-    tagline="About"
+    tagline="About Our Team"
     image={aboutImage}
-    imageAlt="Modern web development office"
+    imageAlt="High school students collaborating in a library"
     actions={[
       {
-        text: "Contact Us",
+        text: "Inquire Now",
         href: "/contact",
         variant: "primary",
         icon: "lucide:mail",
       },
       {
-        text: "View Details",
+        text: "Our Story",
         href: "#",
         variant: "secondary",
         icon: "lucide:arrow-right",
       },
     ]}
   />
+
   <Values
     items={values}
     columns={3}
-    tagline="Our Values"
-    title="What Defines Us"
-    subtitle="Principles that guide our daily work"
+    tagline="Our Core Principles"
+    title="The Student-to-Student Difference"
+    subtitle="What makes our approach more effective than traditional tutoring."
   />
 </BaseLayout>

@@ -1,0 +1,21 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Content from "@/components/widgets/Content.astro";
+import Form from "@/components/ui/Form.astro";
+
+const metadata = {
+  title: "Contact",
+  description: "Get in touch with us to discuss your next project.",
+};
+
+const visionText = ["Get in touch with us to discuss your next project."];
+---
+
+<BaseLayout {metadata}>
+  <Content tagline="Join us" title="Book a Session" description={visionText} />
+  <div
+    class="reveal mx-auto max-w-xl bg-card border border-border rounded-3xl p-8 shadow-sm mb-12 md:mb-16"
+  >
+    <Form />
+  </div>
+</BaseLayout>

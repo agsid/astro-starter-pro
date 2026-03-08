@@ -3,132 +3,139 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { siteConfig } from "@/config/site";
 import Hero from "@/components/widgets/Hero.astro";
 import Features from "@/components/widgets/Features.astro";
-import devImg from "@/assets/images/dev_balanced.png";
-import openSourceImg from "@/assets/images/open-source.png";
+import devImg from "@/assets/images/dev_balanced.png"; // Suggestion: Replace with a photo of students studying
+import openSourceImg from "@/assets/images/open-source.png"; // Suggestion: Replace with a "community" graphic
 import Content2 from "@/components/widgets/Content2.astro";
+
 const metadata = {
-  title: `${siteConfig.name} — The next step for your project`,
+  title: `Peak Peer — High School Mentors for Middle School Success`,
   description:
-    "A modern and professional template for your web projects with Astro and Tailwind CSS. Boost your development with a solid foundation.",
+    "Empowering middle schoolers through personalized tutoring led by high-achieving high school students. Relatable, affordable, and effective.",
   ignoreTitleTemplate: true,
 };
 ---
 
 <BaseLayout {metadata}>
   <Hero
-    title={`Starter Template for <br class="hidden md:block" /> <span class="bg-linear-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Web Developers</span>`}
-    tagline="Astro v5 + Tailwind v4"
-    description={`${siteConfig.description}`}
+    title={`Master Middle School <br class="hidden md:block" /> <span class="bg-linear-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">With Mentors Who’ve Been There</span>`}
+    tagline="Student-to-Student Success"
+    description="Bridge the gap between 'I don't get it' and 'I've got this.' Our high school tutors provide the academic support and high school prep that teachers can't."
     actions={[
       {
-        text: "Get Started",
-        href: "https://github.com/devgelo-labs/astro-starter-pro",
+        text: "Book a Session",
+        href: "/book",
         variant: "primary",
-        icon: "lucide:github",
+        icon: "lucide:calendar-check",
       },
       {
-        text: "Our Services",
-        href: "/services",
+        text: "Meet the Tutors",
+        href: "/team",
         variant: "secondary",
-        icon: "lucide:arrow-right",
-        ariaLabel: "Learn more about our services",
+        icon: "lucide:users",
+        ariaLabel: "Meet our high school tutoring team",
       },
     ]}
   />
+
   <Features
-    tagline="Features"
-    title="What's Included"
-    subtitle="A selection of tools and configurations to streamline your workflow."
+    tagline="Why Choose Peak Peer?"
+    title="The Peer Advantage"
+    subtitle="We don't just teach subjects; we teach the habits that helped us succeed in the same classrooms your kids are in now."
     features={[
       {
-        title: "Optimized SEO",
+        title: "Relatable Mentorship",
         description:
-          "Base configuration for Meta tags, Open Graph, and Sitemap generation.",
-        icon: "lucide:scan-search",
+          "Middle schoolers listen to us because we speak their language and understand their social-academic balance.",
+        icon: "lucide:smile",
         iconClass: "bg-blue-500/10 text-blue-400",
       },
       {
-        title: "High Performance",
-        description: "Lightweight structure for fast load times.",
-        icon: "lucide:zap",
+        title: "Recent Curriculum Expertise",
+        description:
+          "We just took these classes. We know exactly what the tests look like and how to ace them.",
+        icon: "lucide:book-open",
         iconClass: "bg-purple-500/10 text-purple-400",
       },
       {
-        title: "Tailwind v4",
+        title: "Affordable Rates",
         description:
-          "Integrated configuration with the latest version of Tailwind CSS.",
-        icon: "lucide:palette",
+          "High-quality tutoring shouldn't break the bank. We offer competitive pricing that supports student workers.",
+        icon: "lucide:banknote",
         iconClass: "bg-pink-500/10 text-pink-400",
       },
     ]}
   />
+
   <Content2
     items={[
       {
-        title: "Responsive Design",
+        title: "Math & Science",
         description:
-          "Base configuration for Meta tags, Open Graph, and Sitemap generation.",
-        icon: "lucide:scan-search",
+          "From Pre-Algebra to Earth Science, we break down complex concepts into simple steps.",
+        icon: "lucide:binary",
         iconClass: "bg-blue-500/10 text-blue-400",
       },
       {
-        title: "High Performance",
-        description: "Lightweight structure for fast load times.",
-        icon: "lucide:zap",
+        title: "Writing & Humanities",
+        description:
+          "Essay structuring, grammar polish, and historical analysis made easy.",
+        icon: "lucide:pen-tool",
         iconClass: "bg-purple-500/10 text-purple-400",
       },
       {
-        title: "Tailwind v4",
+        title: "Organization Skills",
         description:
-          "Integrated configuration with the latest version of Tailwind CSS.",
-        icon: "lucide:palette",
+          "The 'Secret Sauce': Managing lockers, planners, and Google Classroom efficiently.",
+        icon: "lucide:check-square",
         iconClass: "bg-pink-500/10 text-pink-400",
       },
     ]}
     image={devImg}
-    imageAlt="Development"
+    imageAlt="High school tutor helping a middle school student"
   >
     <Fragment>
       <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
-        Development
+        Academic Mastery
       </h3>
-      We provide a solid foundation to start your projects with best practices.
+      We cover all core subjects with a focus on building confidence and core competencies
+      for the high school transition.
     </Fragment>
   </Content2>
+
   <Content2
     items={[
       {
-        title: "Open Source",
+        title: "High School Prep",
         description:
-          "Developed under the MIT license, free for personal and commercial use.",
-        icon: "lucide:github",
+          "Advice on course selection, extracurriculars, and what to expect in 9th grade.",
+        icon: "lucide:graduation-cap",
         iconClass: "bg-indigo-500/10 text-indigo-400",
       },
       {
-        title: "Community Driven",
+        title: "Local Community",
         description:
-          "Built with the feedback and contributions of the developer community.",
-        icon: "lucide:users",
+          "We live in the same district and know the specific expectations of your local teachers.",
+        icon: "lucide:map-pin",
         iconClass: "bg-orange-500/10 text-orange-400",
       },
       {
-        title: "Regular Updates",
+        title: "Flexible Scheduling",
         description:
-          "Continuously improved with the latest technologies and best practices.",
-        icon: "lucide:refresh-cw",
+          "Evening and weekend slots available to fit around sports and club activities.",
+        icon: "lucide:clock",
         iconClass: "bg-teal-500/10 text-teal-400",
       },
     ]}
     image={openSourceImg}
-    imageAlt="Community and Open Source"
+    imageAlt="A group of students collaborating"
     isReversed={true}
   >
     <Fragment>
       <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
-        Open Source & Community
+        More Than Just Grades
       </h3>
-      Join the revolution of modern web development. This project is open for everyone
-      to use, learn from, and contribute to.
+      We act as big brothers and sisters, providing a roadmap for navigating the social
+      and academic pressures of being a teenager today.
     </Fragment>
   </Content2>
 </BaseLayout>
